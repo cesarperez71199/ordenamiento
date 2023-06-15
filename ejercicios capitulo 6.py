@@ -5,68 +5,7 @@ Created on Wed May 31 16:03:45 2023
 @author: Cesar Perez
 """
 
-# **********  CAPITULO 6  ***********
-
-
-#ejercicio 6 
-
-
-import math
-import random
-
-
-
-#Variables de vectores
-x=[3,4,5]
-y=[-2,-1,6]
-
-
-#Variable temporal donde se guardara la suma de los vectores
-suma=0
-
-
-#for que hara la suma de los vectores
-for i in range(len(x)):
-    
-    suma= suma + x[i]*y[i]      # suma= 0 + 3 * -2
-                                # suma= -6 + 4* -1
-                                # suma= -10 + 5*6
-                                # suma= 20
-
-
-
-print("El resultado del escalar de X y Y por el coseno es: ", math.cos(suma)
-      
-
-
-
-#Ejercicio 8
-
-"""
-a=[5,2]
-b=[2,3]
-
-factor=0
-
-for i in range(len(a)):
-    
-    factor= factor + a[i]*b[i]
-    
-        
-print("El trabajo de los vectores a y b es: ", factor, "Joules")
-
-angulo= math.cos(factor)
-
-print("El angulo es: ", angulo) 
-
-"""
-
-
-
-#Ejercicio 9
-
-
-"""
+#Ordenamiento de vectores
 
 #Genenera 20 numeros aleatorios y los almacena en una lista
 numeros= [random.randint(0, 5) for _ in range(5)]
@@ -107,49 +46,6 @@ for i in range(longitud-1):                     #Para i en el rango de la longit
 print(vector)
             
 
-"""
-
-
-#Ejercicio 11
-
-
-
-# Generar un vector aleatorio de 10 números
-vector = [random.randint(1, 100) for _ in range(10)]
-print("Vector aleatorio:", vector)
-
-
-
-# Seleccionar el penúltimo elemento
-penultimo = vector[-2]
-print("Penúltimo elemento:", penultimo)
-
-# Utilizar el algoritmo de búsqueda binaria
-def busqueda_binaria(vector, elemento):
-    izquierda = 0
-    derecha = len(vector) - 1
-
-    while izquierda <= derecha:
-        medio = (izquierda + derecha) // 2
-
-        if vector[medio] == elemento:
-            return medio
-        elif vector[medio] < elemento:
-            izquierda = medio + 1
-        else:
-            derecha = medio - 1
-
-    return -1
-
-# Buscar el penúltimo elemento utilizando búsqueda binaria
-indice = busqueda_binaria(vector, penultimo)
-if indice != -1:
-    print("El penúltimo elemento se encuentra en el índice:", indice)
-else:
-    print("El penúltimo elemento no se encuentra en el vector.")
-
-    
-    
     
     
 
